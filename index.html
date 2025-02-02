@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio JS</title>
+</head>
+
+<body>
+    <h1>Título Inicial</h1>
+
+    <button onclick="mostrarMensagemConsole()">Console</button>
+    <button onclick="mostrarAlerta()">Alerta</button>
+    <button onclick="perguntarCidade()">Prompt</button>
+    <button onclick="somarNumeros()">Soma</button>
+
+    <script>
+        // Função para alterar o conteúdo da tag h1
+        function alterarTitulo() {
+            document.querySelector('h1').textContent = 'Hora do Desafio';
+        }
+
+        // Função para exibir mensagem no console
+        function mostrarMensagemConsole() {
+            console.log('O botão Console foi clicado');
+        }
+
+        // Função para exibir alerta
+        function mostrarAlerta() {
+            alert('Eu amo JS');
+        }
+
+        // Função para exibir prompt e alerta com nome da cidade
+        function perguntarCidade() {
+            const cidade = prompt('Digite o nome de uma cidade do Brasil:');
+            if (cidade) {
+                alert(`Estive em ${cidade} e lembrei de você.`);
+            }
+        }
+
+        // Função para somar dois números
+        function somarNumeros() {
+            const numero1 = parseInt(prompt('Digite o primeiro número inteiro:'));
+            const numero2 = parseInt(prompt('Digite o segundo número inteiro:'));
+
+            if (!isNaN(numero1) && !isNaN(numero2)) {
+                const soma = numero1 + numero2;
+                alert(`A soma é: ${soma}`);
+            } else {
+                alert('Por favor, digite números inteiros válidos.');
+            }
+        }
+
+        // Chamando a função para alterar o título ao carregar a página
+        alterarTitulo();
+    </script>
+</body>
+
+</html>
